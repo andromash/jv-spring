@@ -3,6 +3,7 @@ package spring.intro.config;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +21,7 @@ import spring.intro.model.User;
 public class AppConfig {
     private final Environment environment;
 
+    @Autowired
     public AppConfig(Environment environment) {
         this.environment = environment;
     }
